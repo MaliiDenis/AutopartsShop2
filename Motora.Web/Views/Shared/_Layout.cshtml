@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @* <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.css" /> *@
+    @* <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" /> *@
+    @* <link href="~/Content/css/style.css" rel="stylesheet" /> *@
+    @* <link href="~/Content/css/responsive.css" rel="stylesheet" /> *@
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    @Styles.Render("~/bundles/css")
+</head>
+<body>
+<!-- header section strats -->
+<header class="header_section">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+                <span>Motora</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  ml-auto">
+                    <li class="nav-item active">
+                        @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Services", "Service", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Why", "Why", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                </ul>
+                <div class="quote_btn-container">
+                    <form class="form-inline">
+                        <button class="btn   nav_search-btn" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                    <a href="">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>
+                Call : +01 123455678990
+              </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- end header section -->
+
+@RenderBody()
+
+<!-- footer section -->
+<footer class="footer_section">
+    <div class="container">
+        <p>
+            &copy; <span id="displayYear"></span> All Rights Reserved By
+            <a href="https://html.design/">Free Html Templates</a>
+        </p>
+    </div>
+</footer>
+<!-- footer section -->
+@* <script src="~/Scripts/jquery-3.4.1.min.js"></script> *@
+@* <script src="~/Scripts/bootstrap.js"></script> *@
+@* <script src="~/Scripts/custom.js"></script> *@
+@Scripts.Render("~/bundles/scripts")
+@RenderSection("scripts", required: false)
+</body>
+</html>
