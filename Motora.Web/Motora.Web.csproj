@@ -123,6 +123,8 @@
         <Compile Include="App_Start\BundleConfig.cs" />
         <Compile Include="App_Start\FilterConfig.cs" />
         <Compile Include="App_Start\RouteConfig.cs" />
+        <Compile Include="Controllers\AccountController.cs" />
+        <Compile Include="Controllers\AdminController.cs" />
         <Compile Include="Controllers\HomeController.cs" />
         <Compile Include="Global.asax.cs">
             <DependentUpon>Global.asax</DependentUpon>
@@ -158,6 +160,9 @@
         <Content Include="Scripts\bootstrap.js" />
         <Content Include="Scripts\custom.js" />
         <Content Include="Scripts\jquery-3.4.1.min.js" />
+        <Content Include="Views\Account\Login.cshtml" />
+        <Content Include="Views\Account\Register.cshtml" />
+        <Content Include="Views\Admin\Feedbacks.cshtml" />
         <Content Include="Views\Home\Service.cshtml" />
         <Content Include="Views\Home\Why.cshtml" />
         <Content Include="Web.config" />
@@ -180,6 +185,20 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Motora.Application\Motora.Application.csproj">
+        <Project>{c3863246-4980-4504-8862-f4ab6779acd6}</Project>
+        <Name>Motora.Application</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Motora.Database\Motora.Database.csproj">
+        <Project>{034020db-f6da-44fb-89b7-5edade19de65}</Project>
+        <Name>Motora.Database</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Motora.Domain\Motora.Domain.csproj">
+        <Project>{8edcde0d-8616-4691-a9b1-626ca844eb25}</Project>
+        <Name>Motora.Domain</Name>
+      </ProjectReference>
     </ItemGroup>
     <PropertyGroup>
         <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
