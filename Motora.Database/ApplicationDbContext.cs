@@ -19,5 +19,6 @@ namespace Motora.Database
         public DbSet<ProductFeature> ProductFeatures { get; set; }
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<WarehouseStock> WarehouseStocks { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
     }
 }
