@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Motora.Domain.Models.Feedback>
+
+@{
+    ViewBag.Title = "Feedbacks";
+}
+
+<h2>Feedbacks</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Message</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var feedback in Model)
+    {
+        <tr>
+            <td>@feedback.Name</td>
+            <td>@feedback.Email</td>
+            <td>@feedback.Phone</td>
+            <td>@feedback.Message</td>
+            <td>
+                @using (Html.BeginForm("DeleteFeedback", "Admin", FormMethod.Post))
+                {
+                    @Html.Hidden("id", feedback.Id)
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
